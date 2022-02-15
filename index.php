@@ -1,6 +1,7 @@
 <?php 
-    $text = "Welcome!";
+    $text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum exercitationem sunt molestias, quasi facere repellendus ad atque commodi, totam iste dicta nobis libero et assumenda accusantium dolor nostrum obcaecati architecto.";
     $badWord = $_GET["badword"];
+    $censored = str_replace($badWord, "***", $text);
     //var_dump($badWord);
 ?>
 
@@ -13,7 +14,7 @@
     <title>Document</title>
 </head>
 <body>
-    <p> <?php echo $text, " ", strlen($text) ?> </p>
-    <span> <?php echo str_replace("arola", "***", $badWord) ?></span>
+    <p> <?php echo $text, " Lettere: ", strlen($text) ?> </p>
+    <?php echo "<br><br>", $censored?>
 </body>
 </html>
